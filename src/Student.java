@@ -6,7 +6,7 @@ public class Student {
     private String nazwisko;
     private int numerIndeksu;
     private int rokStudiow;
-    private List<Przedmiot> listaPrzedmiotow;
+    private Przedmiot[] listaPrzedmiotow;
 
     public Student(String imie, String nazwisko, int numerIndeksu, int rokStudiow) {
         this.imie = imie;
@@ -32,7 +32,7 @@ public class Student {
     }
 
     public List<Przedmiot> getListaPrzedmiotow() {
-        return listaPrzedmiotow;
+        return List.of(listaPrzedmiotow);
     }
 
     @Override
@@ -58,7 +58,7 @@ public class Student {
         return Objects.hash(imie, nazwisko, numerIndeksu, rokStudiow, listaPrzedmiotow);
     }
 
-    public void setListaPrzedmiotow(List<Przedmiot> listaPrzedmiotow) {
+    public void setListaPrzedmiotow(Przedmiot[] listaPrzedmiotow) {
         this.listaPrzedmiotow = listaPrzedmiotow;
     }
 }
